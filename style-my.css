@@ -19,13 +19,15 @@ body {
     margin: auto;
     overflow: hidden;
     padding: 0 3rem;
+    display: flex;
+
 }
 
 #index-page {
     background: var(--primary-color);
     color: #fff;
     height: 100vh;
-    position: relative;
+    display:flex;
 }
 
 #index-page::before {
@@ -49,11 +51,9 @@ body {
 }
 
 .horizontal-line {
-    display: block;
-    
+    display: flex;
     border-bottom: #fff 2px solid;
     height: 2.4rem;
-    position: relative;
     width: 44rem;
 }
 
@@ -71,16 +71,17 @@ h1 {
 }
 
 .overlay-wrap {
-    /* position: fixed;
-    top: 0;
-    left: 0; */
     z-index: 1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .overlay-wrap .toggler {
     position: absolute;
-    
+    display: flex;
     z-index: 2;
     cursor: pointer;
     width: 50px;
@@ -89,7 +90,8 @@ h1 {
 }
 
 .overlay-wrap .text-btn {
-    position: absolute;
+    /* position: absolute; */
+    display: flex;
     z-index: 1;
     width: 50px;
     height: 25px;
@@ -167,30 +169,7 @@ ul {
     align-items: center;
     justify-content: center;
 }
-/* ul::before {
-    content: '';
-    display: block;
-    position: relative;
 
-    top: -2.4rem;
-    left: 50%;
-    width: 2px;
-    height: 3rem;
-    background: #fff;
-    
-}
-ul::after {
-    content: '';
-    display: block;
-    position: relative;
-
-    top: -2.4rem;
-    left: -45rem;
-    width: 45rem;
-    height: 2px;
-    background: rgb(247, 15, 15);
-    
-} */
 li {
     display: inline-block;
     list-style: none;
@@ -200,7 +179,7 @@ li {
 }
 
 .option {
-    padding: 0.4rem 0.7rem;
+    padding: 0.7rem 0.7rem;
     border: #fff solid 1px;
     min-width: 6.8rem;
 }
