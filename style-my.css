@@ -1,0 +1,211 @@
+:root {
+    --primary-color: rgba(7, 57, 50, 0.60);
+    --secondary-color: rgba(133, 88, 3, 0.9);
+    --overlay-color: rgba(19, 45, 44, 0.87);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+}
+
+.container {
+    margin: auto;
+    overflow: hidden;
+    padding: 0 3rem;
+}
+
+#index-page {
+    background: var(--primary-color);
+    color: #fff;
+    height: 100vh;
+    position: relative;
+}
+
+#index-page::before {
+    content: '';
+    background: url('img/matthew-smith-Rfflri94rs8-unsplash.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.logo {
+    display: inline-block;
+    padding: 15px 10px;
+    border: #fff solid 3px;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.horizontal-line {
+    display: block;
+    
+    border-bottom: #fff 2px solid;
+    height: 2.4rem;
+    position: relative;
+    width: 44rem;
+}
+
+h1 {
+    margin-top: 2.4rem;
+}
+
+#index-page .index-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.overlay-wrap {
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    z-index: 1;
+}
+
+
+.overlay-wrap .toggler {
+    position: absolute;
+    
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+    opacity: 0;
+}
+
+.overlay-wrap .text-btn {
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 25px;
+    padding: 1rem;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.upper-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.overlay-wrap .toggler:checked ~ .upper-window {
+    visibility: visible;
+}
+
+.overlay-wrap .toggler:checked ~ .upper-window > div {
+    transform: scale(1);
+    transition-duration: 0.50s;
+}
+
+.overlay-wrap .toggler:checked ~ .upper-window > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4s;
+}
+
+.overlay-wrap .upper-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-wrap .upper-window > div {
+    background: var(--overlay-color);
+    width: 70vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.overlay-wrap .upper-window > div > div {
+    text-align: center;
+    max-width: 65vw;
+    max-height: 65vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    color: white;
+}
+
+
+
+nav {
+    display: flex;
+    margin-top: 3.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+   
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ul::before {
+    content: '';
+    display: block;
+    position: relative;
+
+    top: -2.4rem;
+    left: 50%;
+    width: 2px;
+    height: 3rem;
+    background: #fff;
+    
+}
+ul::after {
+    content: '';
+    display: block;
+    position: relative;
+
+    top: -2.4rem;
+    left: -45rem;
+    width: 45rem;
+    height: 2px;
+    background: rgb(247, 15, 15);
+    
+} */
+li {
+    display: inline-block;
+    list-style: none;
+    min-height: 2.4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.option {
+    padding: 0.4rem 0.7rem;
+    border: #fff solid 1px;
+    min-width: 6.8rem;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
